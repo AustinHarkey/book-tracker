@@ -59,6 +59,8 @@ let view = {
     },
     displayBooks: (bookList) => {
         myLibrary.forEach(book => {
+
+            //creating DOM elements
             let bookCard = document.createElement('li');
             bookCard.classList.add('library__book');
             let bookCover = document.createElement('img');
@@ -75,6 +77,7 @@ let view = {
             let bookBtn = document.createElement('div');
             bookBtn.classList.add('library__btn');
 
+            // logic for read/to read status 
             if(!book.read) {
                 bookBtn.innerHTML = 'Want to Read';
             } else {
@@ -82,13 +85,15 @@ let view = {
                 bookBtn.classList.add('library__btn--read');
             }
 
+            // card click event to toggle Read / Want to Read
+            // This toggle currently only reflects the status in the dom
+            // How can I also change the boolean status of the data in the myLibrary array?
             bookCard.addEventListener('click', (e) => {
                 let btn = e.target.querySelector('.library__btn');
                 btn.classList.toggle('library__btn--read');
                 if(btn.classList.contains('library__btn--read')) {
                   console.log('library__btn--read');
                   btn.innerHTML = 'Read';
-                  
                 } else {
                    console.log('else');
                    btn.innerHTML = 'Want to Read';
