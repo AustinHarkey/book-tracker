@@ -9,36 +9,45 @@
     <title>Document</title>
 </head>
 <body>
+<div class="overlay"></div>
     
-    <form class="bookForm">
-        <div class="bookForm__row">
-            <label for="title">Book Title:</label>
-            <input type="text" name="bookTitle" class="bookForm__title">
-        </div>
-        <div class="bookForm__row">
-            <label for="author">Book Author:</label>
-            <input type="text" name="bookAuthor" class="bookForm__author">
-        </div>
-        <div class="bookForm__row">
-            <label for="title">Number of Pages:</label>
-            <input type="text" name="bookPages" class="bookForm__pages">
-        </div>
-        <div class="bookForm__row">
-            <label for="title">Have you read it?:</label>
-            <input type="checkbox" name="bookRead" class="bookForm__read">
-        </div>
-        <div class="bookForm__row">
-            
-        </div>
-        <button type="submit" value="Add Book">Submit</button>
-    </form>
     <main class="main">
-        <div class="container">
-            <ul class="library">
+        <div class="toolbar">
+            <div class="container">
+                <div class="toolbar__wrapper">
+                    <h1 class="toolbar__header">My Library</h1>
+                    <div class="toolbar__add"><p class="library__text">Add a book</p><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
         </div>
+        <div class="container">
             
-        </ul>
+            <ul class="library">
+                
+            </ul>
+        </div>
 
+        <form class="bookForm">
+            <h2 class="bookForm__header">Add a book</h2>
+            <div class="bookForm__row">
+                <label class="bookForm__label" for="title">Book Title:</label>
+                <input type="text" name="bookTitle" class="bookForm__input bookForm__title" required>
+            </div>
+            <div class="bookForm__row">
+                <label class="bookForm__label" for="author">Book Author:</label>
+                <input type="text" name="bookAuthor" class="bookForm__input bookForm__author" required>
+            </div>
+            <div class="bookForm__row">
+                <label class="bookForm__label" for="title">Number of Pages:</label>
+                <input type="number" name="bookPages" class="bookForm__input bookForm__pages" required>
+            </div>
+            <div class="bookForm__row bookForm__row--check">
+                <label class="bookForm__label bookForm__label--check" for="title">Have you read it?:</label>
+                <input type="checkbox" name="bookRead" class="bookForm__input bookForm__read">
+            </div>
+    
+            <button class="bookForm__submit" type="submit" value="Add Book">Submit</button>
+        </form>
        
     </main>
     <script src="app.js"></script>
