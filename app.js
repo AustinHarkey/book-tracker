@@ -30,7 +30,7 @@ let myLibrary = [
         cover: 'covers/dune.jpg'
     },
     {
-        title: 'The Alice Network the longest book tile in the world',
+        title: 'The Alice Network',
         author: 'Kate Quinn',
         pages: 560,
         read: true,
